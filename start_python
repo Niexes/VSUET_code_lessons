@@ -1,0 +1,318 @@
+from random import random
+
+print('Hello world')
+
+#You know nothing, Jon Snow!
+
+print('Robert')
+print('Stannis')
+print('Ranley')
+print(9780262531962)
+print('What Is Dead May Never Die')
+print(81/9)
+print(6 -(-81))
+print(3**5)
+print(-8 / (-4))
+print(((8 / 2) + 5) - (-3 / 2))
+print(70 * (3 + 4) / (8 + 2))
+print(0.39 * 0.22)
+print((5 ** 2) - (3 * 7))
+print('"Khal Drogo\'s favorite word is "athjahakar""')
+print('Winter came for ' + 'the House of Frey.')
+print(chr(126))
+print(chr(94))
+print(chr(37))
+motto = 'What Is Dead May Never Die!'
+print(motto)
+name = 'Brienna'
+
+# BEGIN
+name = 'anneirB'
+# END
+
+print(name)
+
+family = 'Targaryen'
+
+# BEGIN (write your solution here)
+pet = 'Dragon'
+# END
+
+print(family)
+print(' and ')
+print(pet)
+
+euros_count = 100
+# BEGIN (write your solution here)
+dollars = euros_count * 1.25
+rubles = dollars*60
+print(dollars)
+print(rubles)
+# END
+
+company1 = 'Apple'
+company2 = 'Samsung'
+# BEGIN (write your solution here)
+print(len(company1) + len(company2))
+# END
+
+number = 255
+# BEGIN (write your solution here)
+print(hex(255))
+# END
+
+number = 10.1234
+
+# BEGIN (write your solution here)
+print(round(number, 2))
+# END
+
+text = 'Never forget what you are, for surely the world will not'
+print(f'First: {text[0]}\nLast: {text[-1]}')
+
+print(min(3, 10, 22, -3, 0))
+print(round(random() * 10))
+x = random()*10
+print(round(x))
+
+
+motto = 'Family, Duty, Honor'
+# BEGIN (write your solution here)
+print(type('motto'))
+# END
+
+text = 'a MIND needs Books as a Sword needS a WHETSTONE.'
+# BEGIN (write your solution here)
+print(text.lower())
+# END
+
+first_name = '  Grigor   \n'
+# BEGIN (write your solution here)
+print(first_name.strip())
+# END
+
+
+text = 'Never forget what you are, for surely the world will not'
+# BEGIN (write your solution here)
+print(text.find('N'))
+print(f"Index Of N: {text.find('N')}\nIndex Of ,: {text.find(',')}")
+
+
+text = 'When \t\n you play a \t\n game of thrones you win or you die.'
+print(len(text[4:15].strip()))
+
+
+def print_motto():
+    # Внутри тела отступ четыре пробела
+    text = 'Winter is coming'
+    print(text)
+
+def say_hurray_three_times():
+    return 'hurray! hurray! hurray!'
+
+def truncate(text, length):
+    return f'{text[0:length]}...'
+    # BEGIN (write your solution here)
+
+print(truncate('Winter is coming', 4))
+
+def get_hidden_card(number, base=4):
+    a = '*' * base
+    return f'{a}{number[12:16]}'
+
+print(get_hidden_card('1234567812345678', 6))
+
+def trim_and_repeat(text, offset=0, repetitions=1):
+    return text[offset:len(text)]*repetitions
+
+text = 'python'
+print(trim_and_repeat(text, offset=3, repetitions=2))
+
+def is_pensioner(age):
+    return age >= 60
+
+print(is_pensioner(83))
+
+def is_mister(text):
+    return text == 'Mister'
+
+def is_international_phone(text):
+    return text[0] == '+'
+
+print(is_international_phone('+79602223423'))
+
+def is_leap_year(year):
+    return year%400 == 0 or (year%4 == 0 and year%10 != 0)
+
+print(is_leap_year(2018))
+
+def is_palindrome(text):
+    a = text.lower()
+    b = a[::-1]
+    return a == b
+
+print(is_palindrome('хекслет'))
+
+def is_not_palindrome(text):
+    return not is_palindrome(text)
+
+print(is_not_palindrome('хекслет'))
+
+def string_or_not(text):
+    if (isinstance(text, str) is True):
+        return 'yes'
+    else: return 'no'
+
+def string_or_not2(value):
+    return isinstance(value, str) and 'yes' or 'no'
+
+print('3333333333')
+print(string_or_not('Hexlet'))
+
+def guess_number(number):
+    if number == 42:
+        return 'You win!'
+    else:
+        return 'Try again!'
+
+
+def normalize_url(url):
+    if url[0:8] == 'https://':
+        return url
+    if (url[0:8] != 'https://') and (url[0:7] == 'http://'):
+        return 'https://' + url[7:]
+    else:
+        return 'https://' + url
+
+print('------')
+
+print(normalize_url('http://ai.fi'))
+
+def who_is_this_house_to_starks(name):
+    if name == 'Karstark' or name == 'Tully':
+        return 'friend'
+    elif name == 'Lannister' or name == 'Frey':
+        return 'enemy'
+    else: return 'neutral'
+
+
+print(who_is_this_house_to_starks('Joar'))
+
+def flip_flop(word):
+    return 'flop' if word == 'flip' else 'flip'
+
+print(flip_flop('flip'))
+
+def print_numbers(number):
+    i = number
+    print(number)
+    while i != 1:
+     #   print(i)
+        i = i-1
+        print(i)
+    print('finished!')
+
+print_numbers(10)
+
+
+def multiply_numbers_from_range(num1, num2):
+    i = num1
+    multi = 1
+    while i <= num2:
+        multi = multi * i
+        i = i + 1
+    return multi
+
+
+print(multiply_numbers_from_range(6, 6))
+
+def join_numbers_from_range(num1, num2):
+    i = num1
+    stroka = ''
+    while i <= num2:
+        stroka = stroka + str(i)
+        i = i +1
+    return stroka
+
+print (join_numbers_from_range(2, 3))
+
+def print_reversed_word_by_symbol(text):
+    i = -1
+    while i >= -len(text):
+        print(text[i])
+        i -= 1
+
+print(print_reversed_word_by_symbol('Hexlet'))
+
+
+def count_chars(text, symbol):
+    new_text = text.lower()
+    new_symbol = symbol.lower()
+    a = 0
+    i = 0
+    while i < len(new_text) - 1:
+        if new_text[i] == new_symbol:
+            a = a + 1
+        i += 1
+    return a
+
+print(count_chars('opPa', 'P'))
+
+def my_substr(text, number):
+    i = 0
+    new_str = ''
+    while i < number:
+        new_str = new_str + text[i]
+        i += 1
+    return new_str
+
+print(my_substr('If I look back I am lost', 1))
+
+
+def is_arguments_for_substr_correct(text, start, length):
+    if length < 0:
+        return False
+    elif start < 0:
+        return False
+    elif start >= len(text):
+        return False
+    elif start + length > len(text):
+        return False
+    elif start == 0 and length == 0:
+        return True
+    else:
+        return True
+
+print(is_arguments_for_substr_correct('Sansa Stark', 0, 0))
+
+
+def filter_string(text, symbol):
+    new_text = ''
+    i = 0
+    while i <= len(text) - 1:
+        if text[i] != symbol:
+            new_text = new_text + text[i]
+        i += 1
+    return new_text
+
+print (filter_string('If I look back I am lost', 'I'))
+
+def is_contains_char(text, symbol):
+    i = 0
+    while i <= len(text) - 1:
+        if text[i] == symbol:
+            return True
+        i += 1
+    else: return False
+
+
+print(is_contains_char('Awesomeness', 'd'))
+
+def filter_string2(text, symbol):
+    new_text = ''
+    for a in text:
+        if a.upper() != symbol.upper():
+            new_text = new_text + a
+    return new_text
+
+print(filter_string2('If I look forward I win', 'O'))
